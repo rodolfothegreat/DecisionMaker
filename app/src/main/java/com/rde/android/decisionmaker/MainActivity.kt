@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btnAnswer.setOnClickListener { updateTextBox() }
-
+        tvAnswer.text =""
 
 
     }
@@ -40,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         val anIndex = rand(0, 3)
 
         handler.postDelayed({tvAnswer.text = dodo[anIndex]}, 300)
+        handler.postDelayed({tvAnswer.text = ""}, 3000)
 
 
     }
